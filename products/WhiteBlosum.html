@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Blosum</title>
+    <!-------External JavaScript for the icons using Font Awesome-------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!------Internal css----------->
+    <style>
+        /*---CSS for Ratings---*/
+        .ratings {
+            margin: 15px;
+            margin-left: 0%;
+            margin-bottom: 0%;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex start;
+            align-items: center;
+            padding-top: 0;
+            margin-top: 0%;
+        }
+
+        li {
+            padding-top: 2px;
+            color: #4e4f4f;
+        }
+
+        .checked {
+            color: rgb(255, 255, 0);
+        }
+
+        .fa {
+            font-size: 22px;
+            transition: 4000;
+            margin: 5px;
+        }
+
+        .fa:hover {
+            transform: scale(1.5);
+            transition: 7000;
+        }
+
+        /*----css for Registration button-----*/
+        .article .content .button {
+            margin-top: 39px;
+        }
+
+        .article .content .button a {
+            background-color: #5CDB95;
+            padding: 10px 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 22px;
+            letter-spacing: 1.3px;
+            font-weight: 400;
+            border-radius: 5px;
+        }
+
+        .article .content .button a:hover {
+            background: #000;
+            transition: 0.5s ease;
+        }
+
+        /*---Timer---*/
+        .Time {
+            margin-top: 36px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.942);
+            margin-left: 51px;
+        }
+    </style>
+
+    <!----External Link for CSS------->
+    <link rel="stylesheet" href="../css/ProductCard.css" />
+
+</head>
+
+<body>
+
+    <!------- NavBar ------->
+    <nav>
+        <div class="navbar">
+            <!-- NAVBAR 1ST -->
+            <div class="navmenu" id="nav1">
+                <a href="../HTML/ProductPage.html" class="navicon">MassBonsai</a>
+                <div id="links">
+                    <a href="../HTML/Index.html" class="link" id="active">Home</a>
+                    <a href="../HTML/ProductPage.html" class="link">Product</a>
+                    <a href="../HTML/Blog.html" class="link">Blog</a>
+                    <a href="../HTML/Research.html" class="link">Research</a>
+                    <a href="../HTML/AboutUs.html" class="link">About Us</a>
+                    <a href="../HTML/SignUp.html" class="link">Sign Up</a>
+                    <a href="../HTML/Login.html" class="link" id="login">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--------Products Description and Image--------->
+    <div class="hero">
+        <div class="container">
+            <!-------div for image----->
+            <div class="image-section">
+                <img src="../images/w.jpg" alt="">
+            </div>
+            <!--------Details Description------->
+            <div class="article">
+                <!----Heading of the product-->
+                <div class="title">
+                    <h1>
+                        Satsuki Azalea - White Blossom</h1>
+                </div>
+                <!---------Ratings----------->
+                <div class="ratings" style="display:flex;">
+                    <ul>
+                        <li><i class="fa fa-star checked"></i></li>
+                        <li><i class="fa fa-star checked"></i></li>
+                        <li><i class="fa fa-star checked"></i></li>
+                        <li><i class="fa fa-star checked"></i></li>
+                        <li><i class="fa fa-star checked"></i></li>
+                    </ul>
+                </div>
+                <!---------Price----------->
+                <div class="price">
+                    <h6>$49.00</h6>
+                    <h5 style="color:#212121e9; font-size:16px;">$41.00</h5>
+                </div>
+                <!-----------Details---------->
+                <div class="content">
+                    <p>
+                        With regular care, the blooming Satsuki Azalea bonsai produces white blossoms
+                        in the spring and autumn. Beautiful tiny white blossoms adorn the Satsuki Azalea - White
+                        Blossom.
+                    </p>
+                    <!--------Specification-------->
+                    <div class="Specification">
+                        <h3>Specification Bonsai</h3>
+                        <div>
+                            <li>Age Range is upto 5 to 7 Years.</li>
+                            <li>Height is 8 to 11 inch tall potted.</li>
+                            <li>The required pot is 8 inch Ceramic Bonsai Pot.</li>
+                            <li>Broadleaf Evergreen is the classification for this plant.</li>
+                            <li>Beginner/Intermediate level.</li>
+                        </div>
+                    </div>
+                    <!--Button-->
+                    <div class="button">
+                        <a href="">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----Timer-------->
+    <div class="Time">
+        <h1 style="color:rgba(255, 0, 0, 0.964);">Special Offer upto 27 march so hurry up.</h1><br>
+        <h2 id="date"></h2>
+    </div>
+
+    <!--------FOOTER---------->
+    <footer class="footer" style="background-color: rgb(197, 196, 196);">
+        <div id='innerfooter'>
+            <div class="logo">
+                <a href="../HTML/WhiteBlosum.html" class="navicon">MassBonsai</a>
+            </div>
+            <div class="f2">
+                <div class="navInf">
+                    <a href="../HTML/Index.html" class="inLink">Home</a>
+                    <a href="../HTML/ProductPage.html" class="inLink">Product</a>
+                    <a href="../HTML/Blog.html" class="inLink">Blog</a>
+                    <a href="../HTML/AboutUs.html">About Us</a>
+                    <a href="../HTML/Research.html" class="inLink">Reseach</a>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li class="social-items"><a href="#" id="fb"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="social-items"><a href="" id="tt"><i class="fa-brands fa-twitter"></i></a> </li>
+                        <li class="social-items"><a href="" id="yt"><i class="fa-brands fa-youtube"></i></i></a> </li>
+                    </ul>
+                </div>
+            </div>
+    </footer>
+    <div class="outerfooter">
+        Copyright &copy MASS Bonsai. All Rights Reserved
+    </div>
+
+    <!----JavaScript for Timer---->
+    <script>
+        function samaya() {
+            document.getElementById("date").innerHTML = Date()
+            setTimeout(samaya, 500)
+        }
+        samaya()
+    </script>
+</body>
+
+</html>

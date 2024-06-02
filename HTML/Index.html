@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomePage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* ---------CSS For Navbar---------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      font-family: Times New Roman;
+      font-size: 18px;
+      z-index: 999;
+    }
+
+    #nav1 {
+      background-color: #32612D;
+      height: 70px;
+      width: 55%;
+    }
+
+    .navmenu {
+      display: flex;
+      align-items: center;
+    }
+
+    .navicon {
+      color: #fff; 
+      font-size: 30px;
+      padding: 2px 10px;
+      text-decoration: none;
+      margin-left: 100px;
+      transition: color 0.3 ease ;
+    }
+
+    .navicon:hover {
+      color: rgb(250, 110, 59);
+    }
+
+    #links {
+      margin-left: 40px;
+    }
+
+    .link {
+      position: relative;
+      margin: 0 14px;
+      color: rgba(255, 255, 255, 0.822);
+      text-decoration: none;
+    }
+
+    #active {
+      color: #fff;
+    }
+
+    #active:hover {
+      color: rgb(250, 115, 66);
+    }
+
+    .link:before {
+      content: "";
+      position: absolute;
+      color: rgba(255, 255, 255, 0.822);
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: -1px;
+      transition: width 0.3s ease;
+    }
+
+    .link:hover {
+      color: rgb(250, 115, 66);
+    }
+
+    .link:hover:before {
+      width: 100%;
+      background-color: rgb(250, 115, 66);
+    }
+
+    #nav2 {
+      width: 45%;
+      height: 70px;
+    }
+
+    .sign {
+      padding: 20px;
+      position: absolute;
+      margin-left: 330px;
+    }
+  
+    .link1 {
+      text-decoration: none;
+      color: #000000;
+      transition: color 0.3s ease;
+    }
+
+    .link1:hover {
+      color: rgb(236, 111, 65);
+    }
+
+
+    #login {
+      margin-left: 30px;
+      padding: 8px 29px;
+      color: rgba(255, 255, 255, 0.822);
+      background-color: rgb(236, 111, 65);
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #login:before {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    #login:hover:before {
+      opacity: 1;
+    }
+
+  </style>
+
+  <!-------External JavaScript for the icons using Font Awesome-------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!----- External CSS link -------->
+  <link rel="stylesheet" href="../CSS/Index.css" />
+  <link rel="stylesheet" href="../CSS/Index.css" />
+
+  <!----- EXTERNAL JavaScript Link------>
+  <script src="../JavaScript/Index.js"></script>
+
+</head>
+
+<body>
+
+  <!------- NavBar ------->
+  <nav>
+    <div class="navbar">
+      <!-- NAVBAR 1ST -->
+      <div class="navmenu" id="nav1">
+        <a href="../HTML/Index.html" class="navicon">MassBonsai</a>
+        <div id="links">
+          <a href="../HTML/Index.html" class="link" id="active">Home</a>
+          <a href="../HTML/ProductPage.html" class="link">Product</a>
+          <a href="../HTML/Blog.html" class="link">Blog</a>
+          <a href="../HTML/Research.html" class="link">Research</a>
+          <a href="../HTML/AboutUs.html" class="link">About Us</a>
+        </div>
+      </div>
+      <!-- NAVBAT 2ND -->
+      <div class="navmenu" id="nav2">
+        <div class="sign">
+          <a href="../HTML/SignUp.html" class="link1">Sign Up</a>
+          <a href="../HTML/login.html" class="link1" id="login">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ---INTRODUCTION Of Website ------>
+  <div class="view">
+    <!---- DESCRIPTIONN ---->
+    <div class="description">
+      <h1 style="color:#EDF5E1">Nurture Joy - Embrace Serenity with Your Perfect Bonsai</h1>
+      <p>
+        For the beginning of the new year, our Mass Bonsai is offering special deals with the freshest
+        and the most seasonalable plants with reasonable price. Five lucky winners can win a special
+        gift hamper. Cash refund is guaranteed if the plant doesn't live up
+        to expectations.</p>
+      <button class="cUs" onclick="location.href='../HTML/SignUp.html'">Get Started</button>
+    <!-- Customer review, total products and deliveries -->
+    <div class="review">
+      <div class="rev" id="cust">
+        <h2 style="margin-left: 13px;margin-bottom:8px; font-size:27px; color: #EDF5E1">1100+</h2>
+        <p style="margin-left: 0px; margin-top: 0px; font-size: 15px;">Customers</p>
+      </div>
+      <div class="rev" id="col">
+        <h2 style="margin-left: 13px;margin-bottom:8px; font-size:27px; color: #EDF5E1">300+</h2>
+        <p style="margin-left: 0px; margin-top: 0px; font-size: 15px;">Collections</p>
+      </div>
+      <div class="rev" id="deli">
+        <h2 style="margin-left: 13px;margin-bottom:8px; font-size:27px; color: #EDF5E1">738+</h2>
+        <p style="margin-left: 0px; margin-top: 0px; font-size: 15px;">Delivery</p>
+      </div>
+    </div>
+    </div>
+    <!----- IMAGE------>
+    <div class="image" id="image">
+      <img src="../images/A.jpg" alt="Description of the image">
+    </div>
+  </div>
+
+  <!------ Title for the topic "Plant Care" ------>
+  <h1 style="color: rgba(34, 221, 50, 0.863); text-align: center; margin-top: 40px; font-family: Times New Roman ;">Ways
+    to initiate the process of plant care</h1>
+  <p style="text-align: center; margin-top: 12px; font-size: 16px">Optimal method for tending intelligent and lush green
+    plants.</p>
+
+  <!-- Div for image flipper that contain info about plant care -->
+  <div class="mycontainer">
+
+  </div>
+
+
+  <!----- DIV for most popular plants------>
+  <h1 style="color: rgba(34, 221, 50, 0.863); margin-left:70px; margin-top: 70px; font-family: Times New Roman ;">Most
+    Popular Plants At Mass Bonsai</h1>
+  <div class="container">
+    <div class="card-content">
+      <img src="../images/Boxwood.jpg">
+      <h3>Boxwood</h3>
+      <p>One of the most well-known bonsai species in the world is box wood..... </p>
+      <div class="price">
+        <h6>$57.00</h6>
+        <h5 style="color:#212121e9; font-size:16px;">$52.00</h5>
+      </div>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+      </ul>
+      <button class="viewButton" onclick="location.href='../products/Boxwood.html'">View More</button>
+    </div>
+
+    <div class="card-content">
+      <img src="../images/GFicus.jpg">
+      <h3>Golden Gate Ficus</h3>
+      <p>This Golden Gate ficus bonsai tree is not as difficult to care.....</p>
+      <div class="price">
+        <h6>$65.00</h6>
+        <h5 style="color:#212121e9; font-size:16px;">$54.00</h5>
+      </div>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+      </ul>
+      <button class="viewButton" onclick="location.href='../products/GoldenGetFicus.html'">View
+        More</button>
+    </div>
+
+    <div class="card-content">
+      <img src="../images/PBonsai.jpg">
+      <h3>Pomegranate Bonsai</h3>
+      <p>The Pomegranate produces beautiful bright colored flowers...</p>
+      <div class="price">
+        <h6>$56.00</h6>
+        <h5 style="color:#212121e9; font-size:16px;">$47.00</h5>
+      </div>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+      </ul>
+      <button class="viewButton" onclick="location.href='../products/PomegranateBonsai.html'">View
+        More</button>
+    </div>
+
+    <div class="card-content">
+      <img src="../images/SAzalea.jpg">
+      <h3>Satsuki Azalea</h3>
+      <p>The blossoming features of Satsuki Azalea Bonsai...</p>
+      <div class="price">
+        <h6>$62.00</h6>
+        <h5 style="color:#212121e9; font-size:16px;">$53.00</h5>
+      </div>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+      </ul>
+      <button class="viewButton" onclick="location.href='../products/SatsukiAzalea.html'">View More</button>
+    </div>
+
+    <div class="card-content">
+      <img src="../images/Sago.png">
+      <h3>Sago Palm</h3>
+      <p>This small palm bonsai tree (Sago) may offer a tropical touch....</p>
+      <div class="price">
+        <h6>$61.00</h6>
+        <h5 style="color:#212121e9; font-size:16px;">$52.00</h5>
+      </div>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+      <button class="viewButton" onclick="location.href='../products/SagoPalm.html'">View More</button>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+  <!-------DIV for discount offer--------->
+  <div class="discount">
+    <h1 style="text-align: center; margin-top: 35px; font-family: Cambria; color: #ffff">Sign Up now to get upto 30% off
+    </h1>
+    <p style="text-align: center; margin-top: 15px; font-family: Cambria; color: #ffff">Hurry up! 30% off with free
+      delivery. Limited offer with one you can get three.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Enter Your Email">
+      <button type="submit" onclick="location.href='../HTML/SignUp.html'">Get Started</button>
+    </div>
+  </div>
+
+
+  <!--------FOOTER---------->
+  <footer class="footer" style="background-color: rgb(197, 196, 196);">
+    <div id='innerfooter'>
+      <div class="logo">
+        <a href=" ../HTML/Index.html" class="navicon">MassBonsai</a>
+      </div>
+      <div class="f2">
+        <div class="navInf">
+          <a href="../HTML/Index.html" class="inLink">Home</a>
+          <a href="../HTML/ProductPage.html" class="inLink">Product</a>
+          <a href="../HTML/Blog.html" class="inLink">Blog</a>
+          <a href="../HTML/AboutUs.html" class="inLink">About Us</a>
+          <a href="../HTML/Research.html" class="inLink">Reseach</a>
+        </div>
+        <div class="icon">
+          <ul>
+            <li class="social-items"><a href="#" id="fb"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="social-items"><a href="" id="tt"><i class="fa-brands fa-twitter"></i></a> </li>
+            <li class="social-items"><a href="" id="yt"><i class="fa-brands fa-youtube"></i></i></a> </li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+  <div class="outerfooter">
+    Copyright &copy MASS Bonsai. All Rights Reserved
+  </div>
+
+
+  <!--Internal Javasrcipt for Image Slider-->
+  <script>
+    let mylists = [
+      {
+        // name: "Humidity Control",
+        image: "../images/hu.jpg",
+        name: "Humidity Control",
+        location: "Humidity Control",
+        description: " At Mass Bonsai, we understand the importance of humidity in promoting growth, preventing leaf wilting, and ensuring vibrant foliage. Trust us to provide you with expert guidance and innovative products to create the perfect microclimate for your cherished bonsai collection."
+      },
+      {
+        name: "Pest Anticipation",
+        image: "../images/p5.jpg",
+        location: "Pest Anticipation",
+        description: "We Mass Bonsai ensure the vitality of your bonsai plants with effective pest anticipation—safeguarding their beauty and longevity. Pest anticipation is crucial for maintaining the health and beauty of your bonsai plants"
+      },
+      {
+        name: "Punning Weeds",
+        image: "../images/s3.jpg",
+        location: "Punning Weeds",
+        description: "Experience the transformative power of Mass Bonsai's meticulous weeding services. Our expertise in punning weeds ensures unparalleled growth and beauty in your bonsai plants. Trust us to nurture your miniature masterpiece to perfection."
+      } 
+    ]
+
+    const mycontainer = document.querySelector(".mycontainer")
+
+    function returnHtml(object) {
+      return `
+    <div class="pCard">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="name">${object.name}</div>
+          <img src="${object.image}" alt="">
+        </div>
+        <div class="flip-card-back">
+          <div class="location">${object.location}</div>
+          <p>${object.description}</p>
+        </div>
+      </div>
+    </div>
+  `;
+    }
+
+    const resultHtml = mylists.map((mylist) => {
+      return returnHtml(mylist)
+    })
+
+    console.log("resultHtml", resultHtml)
+
+    mycontainer.innerHTML = resultHtml.join("")
+
+    mycontainer.addEventListener("click", (e) => {
+      if (e.target.closest(".pCard")) {
+        const nameElement = e.target.closest(".pCard").querySelector(".name");
+        const value = nameElement.textContent;
+        alert(value);
+      }
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-------External JavaScript for the icons using Font Awesome-------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="../css/login.css">
+    <!-- Linking to the external JavaScript file with 'defer' attribute -->
+    <script defer src="../JavaScript/login.js"></script>
+</head>
+
+<body>
+    <!-- The main container for the form -->
+    <div class="container">
+        <!-- The form with the ID 'SignUpForm' and action set to '/' (root) -->
+        <form id="SignUpForm" action="/">
+            <!-- Form heading -->
+            <h1>Login</h1>
+
+            <!-- Input control for Email -->
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div> <!-- Container for displaying error messages -->
+            </div>
+
+            <!-- Input control for Password -->
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+                <div class="error"></div> <!-- Container for displaying error messages -->
+            </div>
+
+            <!-- Form submission button -->
+            <button type="submit">Login</button>
+        </form>
+
+          <!-- Social networking links -->
+            <div class="face">
+                <a href="https://www.facebook.com" id="fb"><i class="fa-brands fa-facebook"></i></a>
+                <p>Sign in with facebook</p>
+            </div>
+    
+            <div class="face" id="face2">
+                <a href="https://www.google.com" id="fb"><i class="fa-brands fa-google"></i></a>
+                <p>Sign in with Google</p>
+        </div>
+    </div>
+</body>
+
+</html>

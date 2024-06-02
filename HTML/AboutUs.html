@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <!-------External JavaScript for the icons using Font Awesome-------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!------Internal css----------->
+  <style>
+
+/* ---------CSS For Navbar---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  font-family: Times New Roman;
+  font-size: 18px;
+  z-index: 999;
+}
+
+#nav1 {
+  background-color: #32612D;
+  height: 70px;
+  width: 100%;
+  /* border: 2px solid black; */
+}
+
+.navmenu {
+  display: flex;
+  align-items: center;
+}
+
+.navicon {
+  color: #fff;
+  font-size: 30px;
+  padding: 2px 10px;
+  text-decoration: none;
+  margin-left: 100px;
+  transition: color 0.3 ease;
+}
+
+.navicon:hover {
+  color: rgb(250, 110, 59);
+}
+
+#links {
+  margin-left: 320px;
+}
+
+.link {
+  position: relative;
+  margin: 0 18px;
+  color: rgba(255, 255, 255, 0.822);
+  text-decoration: none;
+}
+
+#active {
+  color: #fff;
+}
+
+#active:hover {
+  color: rgb(250, 115, 66);
+}
+
+.link:before {
+  content: "";
+  position: absolute;
+  color: rgba(255, 255, 255, 0.822);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: rgb(250, 115, 66);
+}
+
+.link:hover:before {
+  width: 100%;
+  background-color: rgb(250, 115, 66);
+}
+
+
+#login {
+  margin-left: 30px;
+  padding: 8px 29px;
+  color: rgba(255, 255, 255, 0.822);
+  background-color: rgb(236, 111, 65);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(236, 111, 65, 0.8); /* Initial shadow, change as needed */
+}
+
+#login:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+#login:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 0 20px rgba(236, 111, 65, 0.8); /* Increased shadow on hover */
+  background-color: rgb(246, 143, 88); /* Slightly changed background color on hover */
+}
+
+#login:hover:before {
+  opacity: 1;
+}
+
+
+/* ------CSS for footeer------- */
+#innerfooter {
+  margin-top: 0;
+  padding: 0;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#innerfooter .logo {
+  font-family: Times New Roman;
+  margin-top: 70px;
+  margin-left: 40PX;
+  width: 30%;
+}
+
+.logo .navicon {
+  color: #43913b;
+  text-decoration: none;
+  font-size: 35px;
+  padding: 30px;
+}
+
+.logo .navicon:hover {
+  color: rgb(231, 109, 64);
+}
+
+.f2 {
+  margin-left: 1px;
+  width: 50%;
+}
+
+.navInf {
+  display: flex;
+  width: 550px;
+  margin: auto;
+  padding-left: 79px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.navInf a {
+  text-decoration: none;
+  padding: 0px 15px;
+  font-size: 20px;
+  font-family: Times New Roman;
+  color: rgba(0, 0, 0, 0.76);
+  transition: color 0.3s ease;
+}
+
+.navInf a:hover {
+  color: rgb(231, 109, 64);
+}
+
+.icon ul {
+  display: flex;
+  width: 400px;
+  height: 40px;
+  padding-left: 0px;
+  margin: auto;
+}
+
+.social-items {
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+.social-items a {
+  padding: 13px;
+  font-size: 30px;
+  color: #43913b;
+}
+
+.social-items #fb:hover {
+  color: darkcyan;
+}
+
+.social-items #tt:hover {
+  color: darkcyan;
+}
+
+.social-items #yt:hover {
+  color: red;
+}
+
+.outerfooter {
+  padding: 2px;
+  text-align: center;
+  font-size: 13px;
+}
+  </style>
+
+  <!----External Link for CSS ans JavaScript------->
+  <link rel="stylesheet" href="../css/AboutUs.css" />
+
+</head>
+
+<body>
+
+       <!------- NavBar ------->
+       <nav>
+        <div class="navbar">
+          <!-- NAVBAR 1ST -->
+          <div class="navmenu" id="nav1">
+            <a href="../HTML/ProductPage.html" class="navicon">MassBonsai</a>
+            <div id="links">
+              <a href="../HTML/Index.html" class="link" id="active">Home</a>
+              <a href="../HTML/ProductPage.html" class="link">Product</a>
+              <a href="../HTML/Blog.html" class="link">Blog</a>
+              <a href="../HTML/Research.html" class="link">Research</a>
+              <a href="../HTML/AboutUs.html" class="link">About Us</a>
+              <a href="../HTML/SignUp.html" class="link">Sign Up</a>
+              <a href="../HTML/Login.html" class="link" id="login">Login</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+  <!--------About Us Title--------->
+  <div class="container">
+    <div class="image-section">
+      <img src="../images/Team.jpg" alt="Description">
+    </div>
+    <article class="article">
+      <h1>About Us</h1>
+      <section class="content">
+        <p>MASS Bonsai is an ecommerce website for bonsai plants. Its main aim is to provide seasonal, beautiful and
+          healthiest bonsai plants to the people who love trees at a reasonable price.Bonsai plant is a unique piece of
+          Asian aesthetic culture. This website is for people who are eager to train trees to grow short as per their 
+          wishes using traditional as well as modern techniques. One of the bestfeatures of our website is that it mostly
+          provides bonsai plants that are useful and easy to maintain at a suitable price rate and offers free shipping 
+          all over Nepal. Our company, MASS Bonsai, has become a brand with multiple branches in a short period of time.</p>
+        <div class="button">
+          <a href="../HTML/login.html">Login</a>
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+  <!-----------Title for the portfoli section --------->
+  <h1 id="title">Meet Our Team</h1>
+
+
+  <!---------- Portfolio 1------------->
+  <div class="About">
+      <!---------Image---------->
+      <div class="p-img">
+        <img src="../images/anjal.jpg" alt="Anjal">
+      </div>
+      <!--------Content----------->
+      <div class="desc">
+        <h1> Anjal Rai</h1>
+        <h3>CEO Of Mass Bonsai</h3>
+        <p style="text-align: justify; color:#212121f1;">Results-driven and visionary CEO with
+          extensive experience in the e-commerce industry. Proven track record of leading successful
+          businesses, growing revenue, and delivering high customer satisfaction. Skilled in strategy
+          development, team management, and stakeholder communication. Passionate about using technology
+          to innovate and improve business operations. Worked as a CEO of Bonsai Plant E-Commerce (2021-Present).
+          Education upto Bachelor of Bachelor in Information Technology, London Met University (2014-2018. Special features e-commerce
+          leadership and strategy,
+          business growth and development, technology innovation and fsinancial management
+        </p>
+        <div class="network">
+          <div id="Link">
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-square-facebook"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+          </div>
+          <div class="btn" style="margin-left:17px; font-weight: 20px;">
+            <a href="../HTML/Feedback.html">Feedback</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <!---------- Portfolio 2------------->
+  <div class="About" id="sese">
+      <!--------Image---------->
+      <div class="p-img">
+        <img src="../images/sese.jpg" alt="Sesehang">
+      </div>
+      <!--------Content------------->
+      <div class="desc">
+        <h1> Sesehang Limbu</h1>
+        <h3>IT Officer</h3>
+        <p style="text-align: justify; color:#212121f1;">Experienced IT professional with a
+          strong background in e-commerce and retail. Skilled in managing and
+          implementing technology solutions to improve business operations and
+          customer experience. Proven track record of delivering successful IT projects and
+          ensuring the security and reliability of IT systems. Qualification upto Bachelor of Science
+          in Computer Science, XYZ University (2014-2018). Specialization on E-commerce technology management,
+          IT operations and security and Software and hardware support.
+        </p>
+        <div class="network">
+          <div id="Link">
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+          </div>
+          <div class="btn" style="margin-left:17px; font-weight: 20px;">
+            <a href="../HTML/Feedback.html">Feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!---------- Portfolio 3------------->
+  <div class="About" id="ang">
+      <!-----------Image--------->
+      <div class="p-img">
+        <img src="../images/Anjila.jpg" alt="Anjila">
+      </div>
+      <!----------Content--------->
+      <div class="desc">
+        <h1> Anjila Karki</h1>
+        <h3>Project Manager</h3>
+        <p style="text-align: justify; color:#212121f1;">Highly organized and results-driven
+          project manager with extensive experience in the e-commerce industry.
+          Skilled in team management, risk management, and stakeholder communication. Worked as a
+          Project Manager at E-Commerce Inc. (2021-Present). Bachelor of Business Administration,
+          Project Management, XYZ University (2014-2018). The specialized skills are E-commerce
+          project management, Agile/Scrum methodologies and Team management</p>
+        <div class="network">
+          <div id="Link">
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-square-facebook"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+          </div>
+          <div class="btn" style="margin-left:17px; font-weight: 20px;">
+            <a href="../HTML/Feedback.html">Feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!---------- Portfolio 4------------->
+  <div class="About" id="mh">
+      <!---------Image---------->
+      <div class="p-img">
+        <img src="../images/Mahi.jpg" alt="Mahi">
+      </div>
+      <!----------Content----------->
+      <div class="desc">
+        <h1>Mahi Chauwan</h1>
+        <h3> Web Developer</h3>
+        <p style="text-align: justify; color:#212121f1;">A web developer with
+          a background in e-commerce development. Skilled in creating user-friendly
+          and visually appealing websites, utilizing modern technologies and best practices
+          for optimal performance. Developed and maintained multiple e-commerce websites,
+          utilizing technologies such as HTML, CSS and JavaScript. Studying bachelors in
+          Itahari International College.
+        <p>
+        <div class="network">
+          <div id="Link">
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+          </div>
+          <div class="btn" style="margin-left:17px; font-weight: 18px;">
+            <a href="../HTML/Feedback.html">Feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--------FOOTER---------->
+  <footer class="footer" style="background-color: rgb(197, 196, 196);">
+    <div id='innerfooter'>
+      <div class="logo">
+        <a href="../HTML/AboutUs.html" class="navicon">MassBonsai</a>
+      </div>
+      <div class="f2">
+        <div class="navInf">
+          <a href="../HTML/Index.html" class="inLink">Home</a>
+          <a href="../HTML/ProductPage.html" class="inLink">Product</a>
+          <a href="../HTML/Blog.html" class="inLink">Blog</a>
+          <a href="../HTML/AboutUs.html">About Us</a>
+          <a href="../HTML/Research.html" class="inLink">Reseach</a>
+        </div>
+        <div class="icon">
+          <ul>
+            <li class="social-items"><a href="#" id="fb"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="social-items"><a href="" id="tt"><i class="fa-brands fa-twitter"></i></a> </li>
+            <li class="social-items"><a href="" id="yt"><i class="fa-brands fa-youtube"></i></i></a> </li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+  <div class="outerfooter">
+    Copyright &copy MASS Bonsai. All Rights Reserved
+  </div>
+</body>
+
+</html>

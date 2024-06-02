@@ -1,0 +1,401 @@
+/* Parent class CSS for the hero page intro and image slider*/
+.view {
+  margin-top: 43px;
+  display: flex;
+  font-family: Times New Roman;
+}
+
+/* Introduction of hero page */
+.view .description {
+  background-color: #32612D;
+  height: 500px;
+  width: 55%;
+  padding: 60px
+}
+
+.view .description h1 {
+  margin-left: 20px;
+  font-size: 35px;
+  margin-bottom: 25px;
+  margin-right: 60px;
+}
+
+.view .description p {
+  margin-left: 9px;
+  font-size: 19px;
+  margin-right: 200px;
+  color: rgba(255, 255, 255, 0.836);
+  margin-bottom: 26px;
+}
+
+
+/*---- Button for the view more link ------*/
+.view .description .cUs {
+  background-color: rgb(221, 76, 23);
+  width: 120px;
+  height: 42px;
+  margin-left: 18px;
+  color: #fff;
+  font-family: Times;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.view .description .cUs:before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.view .description .cUs:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.view .description .cUs:hover:before {
+  opacity: 1;
+}
+
+   /*-- Customer review, total products and deliveries --*/
+   .review{
+    margin-top: 18px;
+    display: flex;
+    margin-left: 5px;
+   }
+
+   .review .rev{
+    height: 70px;
+    width: 100px;
+    margin: 12px 0px;
+    padding: 0px;
+   }
+
+   .review #col{
+    margin-left: 3px;
+   }
+
+   .review #deli{
+    margin-left: 3px;
+   }
+/* -----CSS for image slider------- */
+.view .image {
+  width: 45%;
+  height: 500px;
+}
+
+.view .image img {
+  width: 100%;
+  /* Adjusted width to fill the container */
+  height: 100%;
+  /* Adjusted height to fill the container */
+  object-fit: contain;
+  /* Maintain aspect ratio within the container */
+   transition: 0.3s ease;
+}
+
+/*----CSS for the container that provides info about plant care--- */
+.mycontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 15px;
+}
+
+.pCard {
+  margin: 20px;
+  width: 300px;
+  border-radius: 3px;
+}
+
+.pCard img {
+  margin-left: 45px;
+  width: 200px;
+  height: 180px;
+  object-fit: contain;
+  border: 2px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+.name {
+  font-family: Times New Roman;
+  font-size: 23px;
+  color: solid black;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+
+.name::first-letter {
+  font-size: 28px;
+  color: rgb(250, 110, 59);
+}
+
+.location {
+  margin-left: 60px;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(250, 110, 59);
+}
+
+.location:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.pCard p {
+  color: solid black;
+  text-align: justify;
+  font-family: sens-serif;
+}
+
+/* ---CSS for flipping the cards---- */
+.flip-card-inner {
+  position: relative;
+  height: 200px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip-card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/*--------CSS for Most Popular Plants--------*/
+.container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  overflow-x: auto;
+}
+
+/* ---CSS for scrolling the cards----- */
+.card-content {
+  min-width: 20%;
+  margin: 15px;
+  text-align: center;
+  border: 2px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+  transition: 4000;
+  background: white;
+}
+
+.card-content:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transform: translate(0px, -8px);
+}
+
+img {
+  height: 170px;
+  object-fit: contain;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+
+p {
+  padding: 0px 12px;
+  color: rgba(0, 0, 0, 0.712);
+}
+
+.price h6 {
+  padding-left: 15px;
+  font-size: 16px;
+  color: red;
+  margin-bottom: 5px;
+  text-decoration-line: line-through;
+}
+
+.price h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/*------css for ratings------*/
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.fa {
+  font-size: 22px;
+  transition: 4000;
+  margin-left: 5px;
+}
+
+.checked {
+  color: yellow;
+}
+
+.fa:hover {
+  transform: scale(1.5);
+  transition: 7000;
+}
+
+/*----CSS for view more button------ */
+.viewButton{
+  font-size: 20px;
+  padding: 14px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  border: 20px;
+  margin-top: 9px;
+  color: #ffffff;
+  background: rgb(231, 109, 64);
+}
+
+/* -----CSS for discount and sign up bar------ */
+.discount {
+  height: 240px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  background-image: url(../images/d.jpg);
+  background-size: cover;
+  background-position: 0 0;
+  transition: background-position 0.5s ease;
+}
+
+.search-bar {
+  margin-top: 30px;
+  margin-left: 370px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 500px;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 16px;
+  margin-left: 8px;
+  background-color: rgb(231, 109, 64);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* ------CSS for footeer------- */
+#innerfooter {
+  margin-top: 0;
+  padding: 0;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#innerfooter .logo {
+  font-family: Times New Roman;
+  margin-top: 70px;
+  margin-left: 40PX;
+  width: 30%;
+}
+
+.logo .navicon {
+  color: #43913b;
+  text-decoration: none;
+  font-size: 35px;
+  padding: 30px;
+}
+
+.logo .navicon:hover {
+  color: rgb(231, 109, 64);
+}
+
+.f2 {
+  margin-left: 1px;
+  width: 50%;
+}
+
+.navInf {
+  display: flex;
+  width: 550px;
+  margin: auto;
+  padding-left: 79px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.navInf a {
+  text-decoration: none;
+  padding: 0px 15px;
+  font-size: 20px;
+  font-family: Times New Roman;
+  color: rgba(0, 0, 0, 0.76);
+  transition: color 0.3s ease;
+}
+
+.navInf a:hover {
+  color: rgb(231, 109, 64);
+}
+
+.icon ul {
+  display: flex;
+  width: 400px;
+  height: 40px;
+  padding-left: 0px;
+  margin: auto;
+}
+
+.social-items {
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+.social-items a {
+  padding: 13px;
+  font-size: 30px;
+  color: #43913b;
+}
+
+.social-items #fb:hover {
+  color: darkcyan;
+}
+
+.social-items #tt:hover {
+  color: darkcyan;
+}
+
+.social-items #yt:hover {
+  color: red;
+}
+
+.outerfooter {
+  padding: 2px;
+  text-align: center;
+  font-size: 13px;
+}

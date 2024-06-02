@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <!-------External JavaScript for the icons using Font Awesome-------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!----------Internal CSS ---------->
+    <style>
+         /* ---------- CSS for special offer --------- */
+        .specialOffer {
+            margin-top: 70px;
+            margin-bottom: 30px;
+            height: 400px;
+            overflow: hidden;
+            box-shadow: 5px 5px 10px grey;
+            color: black;
+            text-align: center;
+            padding: 40px 300px 90px 300px;
+            /* Add the following line to set the background image */
+            background-image: url('../images/bm.jpg');
+            /* Set background image size and positioning as needed */
+            background-size: cover;
+            background-position: 0 0;
+            transition: background-position 0.5s ease;
+        }
+
+        .specialOffer h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .specialOffer h3 {
+            margin-bottom: 10px;
+        }
+
+        .specialOffer p {
+            justify-content: space-evenly;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .specialOffer .cUs {
+            background-color: rgb(221, 76, 23);
+            width: 120px;
+            height: 42px;
+            padding: 0px 18px;
+            margin: 22px 0;
+            color: #fff;
+            font-family: Times;
+            font-size: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .specialOffer .cUs:before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .specialOffer .cUs:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .specialOffer .cUs:hover:before {
+            opacity: 1;
+        }
+    </style>
+
+    <!----External Link for CSS and JavaScript------->
+    <link rel="stylesheet" href="../css/ProductPage.css" />
+    <script src="../JavaScript/ProductPage.js"></script>
+</head>
+
+<body>
+
+     <!------- NavBar ------->
+    <nav>
+        <div class="navbar">
+          <!-- NAVBAR 1ST -->
+          <div class="navmenu" id="nav1">
+            <a href="../HTML/ProductPage.html" class="navicon">MassBonsai</a>
+            <div id="links">
+              <a href="../HTML/Index.html" class="link" id="active">Home</a>
+              <a href="../HTML/ProductPage.html" class="link">Product</a>
+              <a href="../HTML/Blog.html" class="link">Blog</a>
+              <a href="../HTML/Research.html" class="link">Research</a>
+              <a href="../HTML/AboutUs.html" class="link">About Us</a>
+              <a href="../HTML/SignUp.html" class="link">Sign Up</a>
+              <a href="../HTML/Login.html" class="link" id="login">Login</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!---------- Div for Special Offer------------->
+    <div class="specialOffer">
+        <h1><span style="color:#ffff;">Special Offer!</span></h1>
+        <h3 style="color:rgb(231, 29, 29);">Hurry up! 30% off with free delivery <br>Limited offer with one you can get three.
+        </h3>
+        <p style="color: #fff; font-size: 19px;">
+            For the beginning of the new year, our Mass Bonsai is offering special deals with the freshest
+            and the most seasonalable plants with reasonable price. Five lucky winners can win a special
+            gift hamper. Cash refund is guaranteed if the plant doesn't live up
+            to expectations.</p>
+        <h2 style="color:solid black;"><span style="color:rgb(231, 29, 29);">Hurry Up!</span> Offer Limit upto 27 March
+        </h2>
+        <button class="cUs" onclick="location.href='../HTML/SignUp.html'">Get Started</button>
+    </div>
+
+
+    <!------Div: Bar that contains registeration form, tile of the available plants, drop down list ------>
+    <div class="bar">
+        <!---Buttons----->
+        <button class="btn btn1" onclick="location.href='../HTML/Login.html'">Login</button>
+        <!-----Title------>
+        <h2 style="font-family:sans-serif;">Available Products</h2>
+        <!-----Selectors----->
+        <div class="select-container">
+            <select class="select-box">
+              <option value="" disabled selected>Sort By</option>
+              <option value="first">Price: High to low</option>
+              <option value="second">Price: Low to High</option>
+              <option value="third">Trending</option>
+              <option value="fourth">Availability</option>
+            </select>
+          </div>
+          
+
+    </div>
+
+    <!------------Div for the Product Cards------------------>
+    <div class="Plants">
+        <div class="card">
+            <img src="../images/Boxwood.jpg">
+            <h3>Boxwood</h3>
+            <p>One of the most well-known bonsai species in the world is box wood..... </p>
+            <div class="price">
+                <h6>$57.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$52.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/Boxwood.html'">View More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/GFicus.jpg">
+            <h3>Golden Gate Ficus</h3>
+            <p>This Golden Gate ficus bonsai tree is not as difficult to care.....</p>
+            <div class="price">
+                <h6>$65.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$54.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/GoldenGetFicus.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/ChineseEml.jpg">
+            <h3>Chinese Elm</h3>
+            <p>The Chinese Elm Bonsai tree is a beautiful addition to any home....</p>
+            <div class="price">
+                <h6>$79.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$70.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/ChineseElm.html'">View More
+            </button>
+        </div>
+
+
+        <div class="card">
+            <img src="../images/PBonsai.jpg">
+            <h3>Pomegranate Bonsai</h3>
+            <p>The Pomegranate produces beautiful bright colored flowers...</p>
+            <div class="price">
+                <h6>$56.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$47.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/PomegranateBonsai.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/SAzalea.jpg">
+            <h3>Satsuki Azalea-Pink Blosoom</h3>
+            <p>The blossoming features of Satsuki Azalea Bonsai Trees make them popular...</p>
+            <div class="price">
+                <h6>$62.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$53.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/SatsukiAzalea.html'">View More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/Sago.png">
+            <h3>Sago Palm</h3>
+            <p>This small palm bonsai tree (Sago) may offer a tropical touch to a environment of a ....</p>
+            <div class="price">
+                <h6>$61.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$52.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/SagoPalm.html'">View More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/MiniElm.jpg">
+            <h3>Miniature Chinese Elm</h3>
+            <p> This miniature palm bonsai tree (Sago) can add a tropical feel to any setting and we can make it more beautiful...</p>
+            <div class="price">
+                <h6>$58.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$49.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/ChineseElm.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/YJuniper.jpg">
+            <h3>Young Juniper</h3>
+            <p>Juniper bonsai is the most well recognized bonsai and may be simply one of the best bonsai ever. It was originated in late... </p>
+            <div class="price">
+                <h6>$49.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$41.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/YoungJuniper.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/RockJuniper.jpg">
+            <h3>Rock Juniper</h3>
+            <p>This enthralling Rock Juniper Bonsai tree embodies the power and ethnicity of the country japan. It is so beautiful that it is ....</p>
+            <div class="price">
+                <h6>$52.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$42.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/RockJuniper.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/TFicus.jpg">
+            <h3>10" Taiwan Ficus</h3>
+            <p> The 10" Taiwan Ficus bonsai tree has a trained "S" form and....</p>
+            <div class="price">
+                <h6>$52.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$45.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/TaiwanFicus.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/LJuniper.jpg">
+            <h3>Large Rock Juniper</h3>
+            <p>The Large Rock Juniper juniper
+                bonsai tree arrives full enough to shape to your liking....</p>
+            <div class="price">
+                <h6>$56.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$43.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/RockJuniper.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/FTea.jpg">
+            <h3>Miniature Flowering Tea Tree</h3>
+            <p> The Flowering Tea Tree in a younger form of tea plant. It is one of famous bonsai. It is very very...</p>
+            <div class="price">
+                <h6>$49.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$39.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/TeaTree.html'">View More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/SBlossom.jpg">
+            <h3>Satsuki Azalea-White Bl0ssom</h3>
+            <p>The blooming Satsuki Azalea bonsai produces white blossoms
+                in the spring and autumn.</p>
+            <div class="price">
+                <h6>$49.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$41.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/SatsukiAzalea.html'">View
+                More</button>
+        </div>
+
+        <div class="card">
+            <img src="../images/SPurple.jpg">
+            <h3>Satsuki Azalea-Purple</h3>
+            <p>Satsuki Azalea-Purple's purple blossoms pop against the dark green leaves...</p>
+            <div class="price">
+                <h6>$52.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$43.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/SastukiPurple.html'">View
+                More</button>
+        </div>
+
+
+        <div class="card">
+            <img src="../images/GBonsai.jpg">
+            <h3>Grand Chinese Elm Bonsai</h3>
+            <p> The Chinese Elm is a fantastic tree for beginners because it easy to take care of ...</p>
+            <div class="price">
+                <h6>$162.00</h6>
+                <h5 style="color:#212121e9; font-size:16px;">$150.00</h5>
+            </div>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="viewButton" onclick="location.href='../products/ChineseElm.html'">View
+                More</button>
+        </div>
+    </div>
+
+  <!--------FOOTER---------->
+  <footer class="footer" style="background-color: rgb(197, 196, 196);">
+    <div id='innerfooter'>
+      <div class="logo">
+        <a href="../HTML/ProductPage.html" class="navicon">MassBonsai</a>
+      </div>
+      <div class="f2">
+        <div class="navInf">
+          <a href="../HTML/Index.html" class="inLink">Home</a>
+          <a href="../HTML/ProductPage.html" class="inLink">Product</a>
+          <a href="../HTML/Blog.html" class="inLink">Blog</a>
+          <a href="../HTML/AboutUs.html">About Us</a>
+          <a href="../HTML/Research.html" class="inLink">Reseach</a>
+        </div>
+        <div class="icon">
+          <ul>
+            <li class="social-items"><a href="#" id="fb"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="social-items"><a href="" id="tt"><i class="fa-brands fa-twitter"></i></a> </li>
+            <li class="social-items"><a href="" id="yt"><i class="fa-brands fa-youtube"></i></i></a> </li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+  <div class="outerfooter">
+    Copyright &copy MASS Bonsai. All Rights Reserved
+  </div>
+
+</body>
+</html>
